@@ -2,11 +2,12 @@ import gradio as gr
 import requests
 
 OLLAMA_URL = "http://localhost:11434/v1/chat/completions"
+MODEL_NAME = "llama3.2:1b"
 
 
 def chatbot(message, history):
     payload = {
-        "model": "llama3.2:1b",
+        "model": MODEL_NAME,
         "messages": [{"role": "user", "content": message}],
     }
     response = requests.post(OLLAMA_URL, json=payload)
@@ -17,7 +18,7 @@ def chatbot(message, history):
 
 with gr.Blocks() as demo:
     with gr.Tab("Chatbot"):
-        gr.Markdown(value="## Local AI Chatbot")
+        gr.Markdown(value="## Ollama Chatbot")
         with gr.Row():
             with gr.Column():
                 msg = gr.Textbox(placeholder="Type your message...")
