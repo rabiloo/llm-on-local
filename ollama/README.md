@@ -8,7 +8,7 @@ We are going to follow the instructions below to set up the environment and serv
 - Bash: A Unix-like shell (Linux/macOS). Windows users can use Git Bash or WSL.
 - Python: Python 3.8 or higher installed. You can download it from [Python download link](https://www.python.org/downloads/).
 
-## Run Bash Scripts
+## Run Scripts
 
 First, we should install Ollama, get the models we want to use, then run them.
 
